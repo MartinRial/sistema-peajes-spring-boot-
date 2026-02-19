@@ -2,8 +2,6 @@
 
 Aplicación web para la gestión de un sistema de peajes, desarrollada en **Java y Spring Boot**, con foco en diseño de software, reglas de negocio y arquitectura orientada a dominio.
 
-El proyecto fue realizado en el marco académico de la materia **Diseño de Aplicaciones** (Universidad ORT Uruguay), priorizando la aplicación de **patrones de diseño**, **principios GRASP** y buenas prácticas de estructuración del código.
-
 ---
 
 ## Descripción general

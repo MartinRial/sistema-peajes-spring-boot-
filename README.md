@@ -163,3 +163,5 @@ Mi aporte principal se centró en:
 - Documentación técnica y diagramas UML.
 
 El desarrollo se realizó de forma colaborativa, utilizando control de versiones con Git.
+Este repositorio corresponde a una versión pública e individual del proyecto, utilizada con fines de presentación profesional y portfolio.
+

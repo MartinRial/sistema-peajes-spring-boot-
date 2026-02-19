@@ -1,0 +1,128 @@
+<!-- CU: Asignar bonificaciones -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asignar bonificaciones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="./css/asignar_bonificaciones.css" />
+    <script src="/vistaWeb.js"></script>
+    <script src="/sse.js"></script>
+  </head>
+  <body>
+    <script src="/utilesVista.js"></script>
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <!-- Header -->
+          <div class="mb-4">
+            <h1 class="h4 mb-0 fw-bold text-dark">
+              <i class="bi bi-grid-fill text-primary me-2"></i>
+              Asignar bonificaciones
+            </h1>
+          </div>
+
+          <!-- Main Card -->
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <form class="row" id="formAsignarBonificacion">
+                <!-- Left Column: Bonificaciones y Puestos -->
+                <div class="col-md-6">
+                  <!-- Bonificaciones definidas -->
+                  <div class="mb-4">
+                    <label for="bonificacionSelect" class="form-label fw-semibold">Bonificaciones definidas</label>
+                    <div id="divBonificaciones"></div>
+                  </div>
+
+                  <!-- Puestos definidos -->
+                  <div class="mb-4">
+                    <label for="puestoSelect" class="form-label fw-semibold">Puestos definidos</label>
+                    <div id="divPuestos"></div>
+                  </div>
+                </div>
+
+                <!-- Right Column: Búsqueda de propietario -->
+                <div class="col-md-6">
+                  <!-- Cédula de identidad -->
+                  <div class="mb-3">
+                    <label for="cedulaInput" class="form-label fw-semibold">Cédula de identidad</label>
+                    <input name="cedula" type="text" class="form-control" id="cedulaInput" placeholder="12345678" value="23456789" maxlength="8" />
+                  </div>
+
+                  <!-- Botón Buscar -->
+                  <div class="d-grid">
+                    <button type="button" class="btn btn-primary" id="buscarBtn" onclick="cargarDatosBonificacion(event);">
+                      <i class="bi bi-search me-2"></i>
+                      Buscar propietario
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <!-- Propietario Info Section -->
+              <div id="propietarioSection" class="mt-4">
+                <hr class="mb-4" />
+
+                <h6 class="fw-semibold mb-3">Propietario</h6>
+                <div class="propietario-info bg-light p-3 rounded mb-4">
+                  <div class="row">
+                    <div class="col-md-6 mb-2">
+                      <strong>Nombre:</strong>
+                      <span id="propietarioNombre" class="text-primary">Propietario Demo 12345678</span>
+                    </div>
+                    <div class="col-md-6 mb-2">
+                      <strong>Estado:</strong>
+                      <span id="propietarioEstado">Activo</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Bonificaciones asignadas -->
+                <h6 class="fw-semibold mb-3">Bonificaciones asignadas</h6>
+                <div class="table-responsive mb-4">
+                  <table class="table table-bordered table-hover align-middle">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Bonificación</th>
+                        <th>Puesto</th>
+                        <th>Fecha asignación</th>
+                      </tr>
+                    </thead>
+                    <tbody id="bonificacionesTable">
+                      <tr>
+                        <td colspan="3" class="text-center text-muted">Sin bonificaciones asignadas</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- Asignar nueva bonificación -->
+                <div class="asignar-section bg-light p-4 rounded">
+                  <h6 class="fw-semibold mb-2">Asignar nueva bonificación</h6>
+                  <p class="text-muted small mb-3">Seleccione bonificación y puesto en las listas de la izquierda y luego asigne.</p>
+                  <div class="d-grid">
+                    <button type="button" class="btn btn-primary btn-lg" id="asignarBtn" onclick="asignarBonificacion(event);">
+                      <i class="bi bi-plus-circle me-2"></i>
+                      Asignar bonificación
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="text-center mt-4">
+            <small class="text-muted">© 2025 - Administración</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/asignar_bonificaciones.js"></script>
+  </body>
+</html>

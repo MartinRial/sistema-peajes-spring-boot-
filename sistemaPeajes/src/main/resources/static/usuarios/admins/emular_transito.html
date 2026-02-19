@@ -1,0 +1,118 @@
+<!-- CU: Emular tránsito -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emular tránsito</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="./css/emular_transito.css" />
+    <script src="/vistaWeb.js"></script>
+  </head>
+  <body>
+    <script src="/utilesVista.js"></script>
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <!-- Header -->
+          <div class="mb-4">
+            <h1 class="h4 mb-2 fw-bold text-dark">
+              <i class="bi bi-grid-fill text-primary me-2"></i>
+              Emular tránsito
+            </h1>
+            <p class="text-muted small mb-0">Seleccione un puesto, verifique sus tarifas, ingrese una matrícula y emule un tránsito</p>
+          </div>
+
+          <!-- Main Card -->
+          <div class="card shadow-sm">
+            <div class="card-body p-4">
+              <form id="emularTransitoForm" class="row">
+                <!-- Left Column: Puesto, Matricula, Fecha -->
+                <div class="col-md-6">
+                  <!-- Puesto Selection -->
+                  <div class="mb-4">
+                    <label for="puestoSelect" class="form-label fw-semibold">Puesto</label>
+                    <div id="divPuestos"></div>
+                  </div>
+
+                  <!-- Matricula -->
+                  <div class="mb-4">
+                    <label for="matriculaInput" class="form-label fw-semibold">Matrícula</label>
+                    <input name="matricula" value="ABC1234" type="text" class="form-control" id="matriculaInput" placeholder="Ej: ABC 1234" maxlength="10" />
+                  </div>
+
+                  <!-- Fecha y hora -->
+                  <div class="mb-4">
+                    <label for="fechaHoraInput" class="form-label fw-semibold">Fecha y hora del tránsito</label>
+                    <input name="fecha" type="datetime-local" class="form-control" id="fechaHoraInput" />
+                  </div>
+                </div>
+
+                <!-- Right Column: Tarifas -->
+                <div class="col-md-6">
+                  <!-- Tarifas Section -->
+                  <div class="mb-4" id="tarifasSection">
+                    <h6 class="fw-semibold mb-3">Tarifas del puesto</h6>
+                    <div class="table-responsive">
+                      <div id="tarifasTableContainer"></div>
+                    </div>
+                    <p class="text-muted small mb-0 mt-1">
+                      <i class="bi bi-info-circle me-1"></i>
+                      Se muestran categoría y monto actuales del puesto seleccionado
+                    </p>
+                  </div>
+                </div>
+              </form>
+
+              <!-- Emular Button -->
+              <div class="d-grid mb-4">
+                <button onclick="handleEmularClick()" type="button" class="btn btn-primary btn-lg" id="emularBtn">
+                  <i class="bi bi-play-circle me-2"></i>
+                  Emular tránsito
+                </button>
+              </div>
+
+              <!-- Resultado Section -->
+              <div id="resultadoSection" style="display: none">
+                <hr class="my-4" />
+                <h6 class="fw-semibold mb-3">Resultado</h6>
+                <div class="resultado-content p-3 bg-light rounded">
+                  <div class="mb-2">
+                    <strong>Propietario:</strong>
+                    <span id="resultPropietario">Juan Pérez (Activo)</span>
+                  </div>
+                  <div class="mb-2">
+                    <strong>Categoría:</strong>
+                    <span id="resultCategoria">A (Auto)</span>
+                  </div>
+                  <div class="mb-2">
+                    <strong>Bonificación:</strong>
+                    <span id="resultBonificacion">Residente Costa de Oro (10%)</span>
+                  </div>
+                  <div class="mb-2">
+                    <strong>Costo del tránsito:</strong>
+                    <span id="resultCosto" class="text-primary fw-semibold">$ 120,00</span>
+                  </div>
+                  <div>
+                    <strong>Saldo luego del tránsito:</strong>
+                    <span id="resultSaldo" class="text-success fw-semibold">$ 1400,75</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <div class="text-center mt-4">
+            <small class="text-muted">© 2025 - Emular tránsito</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/emular_transito.js"></script>
+  </body>
+</html>

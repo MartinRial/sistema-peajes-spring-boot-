@@ -1,0 +1,156 @@
+/* Panel de Propietario - Specific Styles */
+
+body {
+  background-color: var(--bg-light-gray);
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-title {
+  color: #1f2937;
+  font-size: 1.1rem;
+}
+
+/* Table Styling */
+.table {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.table thead th {
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #6c757d;
+  border-bottom: 2px solid #dee2e6;
+  white-space: nowrap;
+}
+
+.table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.table tbody td {
+  padding: 0.75rem;
+  vertical-align: middle;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(45, 90, 150, 0.05);
+}
+
+/* Tabla de tránsitos - columnas específicas */
+.col-puesto {
+  min-width: 120px;
+}
+
+.col-matricula {
+  min-width: 100px;
+}
+
+.col-categoria {
+  min-width: 100px;
+}
+
+.col-monto-tarifa {
+  min-width: 110px;
+  padding-right: 15px !important;
+}
+
+.col-bonificacion {
+  min-width: 130px;
+  padding-left: 15px !important;
+}
+
+.col-monto-bonif {
+  min-width: 130px;
+}
+
+.col-monto-pagado {
+  min-width: 110px;
+}
+
+.col-fecha {
+  min-width: 95px;
+}
+
+.col-hora {
+  min-width: 70px;
+}
+
+/* Badge Styling */
+.badge {
+  padding: 0.35em 0.65em;
+  font-weight: 600;
+  font-size: 0.85em;
+}
+
+/* Alert Styling */
+.alert {
+  border-radius: 8px;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.alert i {
+  font-size: 1.1rem;
+}
+
+/* Button Styling */
+.btn-sm {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.875rem;
+  border-radius: 6px;
+}
+
+/* Text Colors */
+.text-primary {
+  color: var(--primary-blue) !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 1rem !important;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .table {
+    font-size: 0.8rem;
+  }
+
+  .table thead th {
+    font-size: 0.75rem;
+  }
+
+  h1.h4 {
+    font-size: 1.1rem !important;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .table-responsive {
+    font-size: 0.75rem;
+  }
+
+  .badge {
+    font-size: 0.75em;
+  }
+}

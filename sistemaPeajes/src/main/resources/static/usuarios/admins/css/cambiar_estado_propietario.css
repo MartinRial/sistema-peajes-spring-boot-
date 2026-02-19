@@ -1,0 +1,215 @@
+/* Cambiar Estado Propietario - Specific Styles */
+
+body {
+  background: linear-gradient(135deg, var(--bg-light-gray) 0%, #e8eef5 100%);
+  min-height: 100vh;
+}
+
+/* Card Styling */
+.card {
+  border: none;
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Form Elements */
+.form-label {
+  color: #374151;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-select,
+.form-control {
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.form-select-lg,
+.form-control-lg {
+  padding: 0.875rem 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.form-select:focus,
+.form-control:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(45, 90, 150, 0.1);
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: var(--text-light-gray);
+}
+
+/* Button Styling */
+.btn {
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: var(--primary-blue);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-blue-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(45, 90, 150, 0.3);
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Propietario Info Section */
+.propietario-info {
+  border: 1px solid #e5e7eb;
+  animation: fadeIn 0.5s ease;
+}
+
+.propietario-info small {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.propietario-info strong {
+  font-size: 1.1rem;
+  color: #1f2937;
+}
+
+/* Badge Styling */
+.badge {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.bg-success {
+  background-color: #10b981 !important;
+}
+
+.bg-danger {
+  background-color: #ef4444 !important;
+}
+
+.bg-warning {
+  background-color: #f59e0b !important;
+}
+
+.bg-secondary {
+  background-color: #6c757d !important;
+}
+
+/* Icon Styling */
+.bi {
+  vertical-align: middle;
+}
+
+/* Text Colors */
+.text-primary {
+  color: var(--primary-blue) !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.badge-updated {
+  animation: pulse 0.5s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem !important;
+  }
+
+  .card-body {
+    padding: 1.5rem !important;
+  }
+
+  h1.h4 {
+    font-size: 1.25rem !important;
+  }
+
+  .btn {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .form-control-lg,
+  .form-select-lg {
+    padding: 0.75rem 0.875rem;
+    font-size: 1rem;
+  }
+
+  .propietario-info {
+    padding: 1.25rem !important;
+  }
+
+  .propietario-info strong {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-body {
+    padding: 1rem !important;
+  }
+
+  .propietario-info {
+    padding: 1rem !important;
+  }
+
+  .badge {
+    font-size: 0.875rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
